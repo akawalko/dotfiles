@@ -21,10 +21,16 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+# start rofi (default program launcher / application runner / window switcher)
+bindsym $mod+d exec rofi -show drun
+
+# rofi used to mimic alt-tab behavior (press Enter to focus/jump to the window)
+bindsym Mod1+Tab exec rofi -show window
+
+# start dmenu (a fallback program launcher)
+bindsym $mod+Shift+d exec dmenu_run
 # start dmenu for applications with .desktop file
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
