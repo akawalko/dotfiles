@@ -3,6 +3,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $alt Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -24,8 +25,8 @@ bindsym $mod+q kill
 # start rofi (default program launcher / application runner / window switcher)
 bindsym $mod+d exec rofi -show drun
 
-# rofi used to mimic alt-tab behavior (press Enter to focus/jump to the window)
-bindsym Mod1+Tab exec rofi -show window
+# rofi used to mimic alt+tab behavior (press Enter to focus/jump to the window)
+bindsym $alt+Tab exec rofi -show window
 
 # start dmenu (a fallback program launcher)
 bindsym $mod+Shift+d exec dmenu_run
@@ -111,6 +112,9 @@ bindsym $mod+0 workspace $ws10
 bindsym $mod+comma workspace prev
 bindsym $mod+period workspace next
 
+# instant jump to previous workspace
+bindsym $alt+BackSpace workspace back_and_forth
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
@@ -161,6 +165,13 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+#---------------------------------------------------------------
+# Theme
+#---------------------------------------------------------------
+
+# wallpaper
+exec --no-startup-id nitrogen --restore
+
 # Start i3bar to display a workspace bar plus the system information.
 bar {
         status_command ~/bin/bumblebee-status/bumblebee-status \
@@ -169,3 +180,11 @@ bar {
             -p date.format="%a, %d-%m-%Y" time.format="%H:%M:%S" datetime.left-click="dayplanner" \
             -t iceberg-rainbow
 }
+
+#---------------------------------------------------------------
+# Autostart
+#---------------------------------------------------------------
+
+# start notification server
+exec --no-startup-id "dunst &"
+
