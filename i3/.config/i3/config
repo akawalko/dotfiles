@@ -11,6 +11,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# start a file manager
+bindsym $mod+t exec dolphin
+
 # kill focused window
 bindsym $mod+q kill
 
@@ -145,6 +148,16 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #---------------------------------------------------------------
+# Assign applications to specific workspaces
+#---------------------------------------------------------------
+
+assign [class="Firefox-esr"] number 2
+assign [class="jetbrains-phpstorm"] number 3
+assign [class="Vivaldi-stable"] number 8
+assign [class="Skype"] number 9
+
+
+#---------------------------------------------------------------
 # Theme
 #---------------------------------------------------------------
 
@@ -162,7 +175,7 @@ exec --no-startup-id nitrogen --restore
 # Start i3bar to display a workspace bar plus the system information.
 bar {
         status_command ~/bin/bumblebee-status/bumblebee-status \
-            -m cpu sensors hddtemp memory vpn nic dunst pasink pasource date time system \
+            -m cpu sensors hddtemp memory vpn dunst pasink pasource date time system \
             -a sensors hddtemp \
             -p date.format="%a, %d-%m-%Y" time.format="%H:%M:%S" datetime.left-click="dayplanner" \
             -t iceberg-rainbow
@@ -178,3 +191,11 @@ exec --no-startup-id dunst &
 # automatic workspace renamer
 exec --no-startup-id i3wsr &
 
+# unlock KWallet password store
+exec --no-startup-id /usr/share/libpam-kwallet-common/pam_kwallet_init
+
+# add ssh-keys to ssh-agent
+exec --no-startup-id ~/.config/autostart-scripts/ssh-add.sh
+
+# lightweight clipboard history applet
+exec --no-startup-id qlipper
