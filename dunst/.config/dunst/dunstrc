@@ -239,7 +239,7 @@
     # e.g. check output of 'xmodmap -pke'
     history = ctrl+grave
 
-    # Context menu.
+    # Context menu. Will work only if message contains URL.
     context = ctrl+shift+period
 
 [urgency_low]

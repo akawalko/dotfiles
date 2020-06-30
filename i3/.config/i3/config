@@ -16,6 +16,8 @@ bindsym $mod+t exec dolphin
 
 # kill focused window
 bindsym $mod+q kill
+# force kill focused window
+bindsym $mod+x xkill
 
 # start rofi (default program launcher / application runner / window switcher)
 bindsym $mod+d exec rofi -show drun
@@ -199,3 +201,7 @@ exec --no-startup-id ~/.config/autostart-scripts/ssh-add.sh
 
 # lightweight clipboard history applet
 exec --no-startup-id qlipper
+
+# simple calendar with event reminder
+exec --no-startup-id dayplanner
+
