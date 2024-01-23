@@ -1,0 +1,12 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	stu = status -uno
+	un = reset HEAD
+[cola]
+	spellcheck = false
+[user]
+	name = Arkadiusz Kawałko
+	email = arek.kawalko@gmail.com
