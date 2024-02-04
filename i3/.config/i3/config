@@ -20,7 +20,7 @@ bindsym $mod+q kill
 bindsym $mod+x xkill
 
 # start rofi (default program launcher / application runner / window switcher)
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec rofi -show drun -show-icons
 
 # rofi used to mimic alt+tab behavior (press Enter to focus/jump to the window)
 bindsym $alt+Tab exec rofi -show window
@@ -191,7 +191,7 @@ bar {
 exec --no-startup-id dunst &
 
 # automatic workspace renamer
-exec --no-startup-id i3wsr &
+exec --no-startup-id i3wsr --config ~/.config/i3/i3wsr.toml &
 
 # unlock KWallet password store
 exec --no-startup-id /usr/share/libpam-kwallet-common/pam_kwallet_init
