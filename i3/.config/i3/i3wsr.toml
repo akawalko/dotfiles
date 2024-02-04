@@ -1,0 +1,18 @@
+[icons]
+konsole = ""
+dolphin = ""
+kate = ""
+Firefox-esr = ""
+jetbrains-phpstorm = ""
+keepassxc = ""
+Skype = ""
+ksysguard = ""
+
+[aliases]
+konsole = "term"
+Firefox-esr = "Firefox"
+jetbrains-phpstorm = "PhpStorm"
+
+[options]
+no_names = true
+remove_duplicates = true
