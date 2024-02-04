@@ -1,4 +1,4 @@
-alias ll='exa -al --color=always --group-directories-first'
+alias ll='eza -al --color=always --group-directories-first'
 
 alias branch='git branch | grep "*" | awk '\''{print $2}'\'''
 alias pullf='git pull --ff-only origin `branch`'

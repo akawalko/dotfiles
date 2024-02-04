@@ -119,14 +119,14 @@ fi
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-source /home/arek/.config/broot/launcher/bash/br
-source /usr/share/doc/fzf/examples/key-bindings.bash
+#source /home/arek/.config/broot/launcher/bash/br
+#source /usr/share/doc/fzf/examples/key-bindings.bash
 
-eval "$(fasd --init auto)"
+#eval "$(fasd --init auto)"
 
-#[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[ -f /usr/share/bash-completion/completions/fzf ] && source /usr/share/bash-completion/completions/fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+#[ -f /usr/share/bash-completion/completions/fzf ] && source /usr/share/bash-completion/completions/fzf
 
-source ~/bin/forgit/forgit.plugin.zsh
+#source ~/bin/forgit/forgit.plugin.zsh
 
-eval "$(starship init bash)"
+#eval "$(starship init bash)"

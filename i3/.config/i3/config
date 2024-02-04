@@ -12,7 +12,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # start a file manager
-bindsym $mod+t exec dolphin
+bindsym $mod+t exec nautilus
 
 # kill focused window
 bindsym $mod+q kill
@@ -156,6 +156,10 @@ bindsym $mod+r mode "resize"
 assign [class="Firefox-esr"] number 2
 assign [class="jetbrains-phpstorm"] number 3
 assign [class="Vivaldi-stable"] number 8
+assign [class="thunderbird"] number 8
+assign [class="Mail"] number 8
+assign [class="slack"] number 9
+assign [class="Slack"] number 9
 assign [class="Skype"] number 9
 
 
@@ -176,8 +180,8 @@ exec --no-startup-id nitrogen --restore
 
 # Start i3bar to display a workspace bar plus the system information.
 bar {
-        status_command ~/bin/bumblebee-status/bumblebee-status \
-            -m cpu sensors hddtemp memory vpn dunst pasink pasource date time system \
+        status_command ~/.local/bin/bumblebee-status/bumblebee-status \
+            -m cpu sensors hddtemp memory vpn dunst pasink pasource nic battery date time system \
             -a sensors hddtemp \
             -p date.format="%a, %d-%m-%Y" time.format="%H:%M:%S" datetime.left-click="dayplanner" \
             -t iceberg-rainbow
@@ -191,17 +195,17 @@ bar {
 exec --no-startup-id dunst &
 
 # automatic workspace renamer
-exec --no-startup-id i3wsr --config ~/.config/i3/i3wsr.toml &
+#exec --no-startup-id i3wsr --config ~/.config/i3/i3wsr.toml &
 
 # unlock KWallet password store
-exec --no-startup-id /usr/share/libpam-kwallet-common/pam_kwallet_init
+#exec --no-startup-id /usr/share/libpam-kwallet-common/pam_kwallet_init
 
 # add ssh-keys to ssh-agent
-exec --no-startup-id ~/.config/autostart-scripts/ssh-add.sh
+#exec --no-startup-id ~/.config/autostart-scripts/ssh-add.sh
 
 # lightweight clipboard history applet
-exec --no-startup-id qlipper
+exec --no-startup-id diodon #qlipper
 
 # simple calendar with event reminder
-exec --no-startup-id dayplanner
+#exec --no-startup-id dayplanner
 
