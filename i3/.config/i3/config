@@ -20,7 +20,7 @@ bindsym $mod+q kill
 bindsym $mod+x xkill
 
 # start rofi (default program launcher / application runner / window switcher)
-bindsym $mod+d exec rofi -show drun -show-icons
+bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons
 
 # rofi used to mimic alt+tab behavior (press Enter to focus/jump to the window)
 bindsym $alt+Tab exec rofi -show window
